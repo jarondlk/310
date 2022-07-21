@@ -53,7 +53,6 @@ def setup():
 
 
 def swLed(ev=None):
-    GPIO.output(LedPin, GPIO.HIGH)
     global Status
     # Switch led status(on-->off; off-->on)
     Status = not Status
@@ -64,18 +63,22 @@ def swLed(ev=None):
         time.sleep(0.5)
         GPIO.output(LedPin, GPIO.HIGH)
         time.sleep(0.5)
-    
 
 
 # Define a main function for main process
 
 
 def main():
+    global Status
     # Print messages
     print_message()
     while True:
-        # Don't do anything.
-        time.sleep(1)
+        if Status == True:
+            # Don't do anything.
+            time.sleep(1)
+        elif Status == False:
+            GPIO.output(LedPin, GPIO.HIGH)
+
 
 # Define a destroy function for clean up everything after
 # the script finished
@@ -83,7 +86,7 @@ def main():
 
 def destroy():
     # Turn off LED
-    GPIO.output(LedPin, GPIO.HIGH)
+    # GPIO.output(LedPin, GPIO.HIGH)
     # Release resource
     GPIO.cleanup()
 
