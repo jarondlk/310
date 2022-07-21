@@ -53,6 +53,7 @@ def setup():
 
 
 def swLed(ev=None):
+    GPIO.output(LedPin, GPIO.HIGH)
     global Status
     # Switch led status(on-->off; off-->on)
     Status = not Status
@@ -63,7 +64,7 @@ def swLed(ev=None):
         time.sleep(0.5)
         GPIO.output(LedPin, GPIO.HIGH)
         time.sleep(0.5)
-    GPIO.output(LedPin, GPIO.HIGH)
+    
 
 
 # Define a main function for main process
