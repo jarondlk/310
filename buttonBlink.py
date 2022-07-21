@@ -83,7 +83,7 @@ def main():
 
 def destroy():
     # Turn off LED
-    # GPIO.output(LedPin, GPIO.HIGH)
+    GPIO.output(LedPin, GPIO.HIGH)
     # Release resource
     GPIO.cleanup()
 
