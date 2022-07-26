@@ -63,6 +63,7 @@ def swLed(ev=None):
         time.sleep(0.5)
         GPIO.output(LedPin, GPIO.HIGH)
         time.sleep(0.5)
+        GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=swLed)
         print(Status)
 
 
