@@ -71,13 +71,13 @@ def setColor(color):
 
     # Map color value from 0~255 to 0~100
     # R_val = MAP(R_val, 0, 255, 0, 100)
-    G_val = MAP(G_val, 0, 0, 0, 100)
-    # B_val = MAP(B_val, 0, 0, 0, 100)
+    G_val = MAP(G_val, 0, 255, 0, 100)
+    # B_val = MAP(B_val, 0, 255, 0, 100)
 
     # Change the colors
     # p_R.ChangeDutyCycle(R_val)
-    # p_G.ChangeDutyCycle(G_val)
-    p_B.ChangeDutyCycle(B_val)
+    p_G.ChangeDutyCycle(G_val)
+    # p_B.ChangeDutyCycle(B_val)
 
     # print("color_msg: R_val = %s,	G_val = %s,	B_val = %s" %
     #       (R_val, G_val, B_val))
