@@ -3,8 +3,8 @@ from time import sleep
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-pinNumLED = 5
-pinNumBTN = 16
+pinNumLED = 17
+pinNumBTN = 18
 GPIO.setup(pinNumLED, GPIO.OUT)
 GPIO.setup(pinNumBTN, GPIO.IN)
 
