@@ -51,24 +51,44 @@ def setup():
 
 # Define a callback function for button callback
 
+# Define a callback function for button callback
+
 
 def swLed(ev=None):
     global Status
     # Switch led status(on-->off; off-->on)
     Status = not Status
-    # GPIO.output(LedPin, Led_status)
-    print('SWITCH PRESSED B1TCH')
-    while Status == False:
+    GPIO.output(LedPin, Status)
+    if Status:
+        print("LED OFF...")
+    else:
+        # print("...LED ON")
+        print("...LED ON")
+        # Turn on LED
         GPIO.output(LedPin, GPIO.LOW)
         time.sleep(0.5)
+        print("LED OFF...")
+        # Turn off LED
         GPIO.output(LedPin, GPIO.HIGH)
         time.sleep(0.5)
-        print(Status)
+
+# def swLed(ev=None):
+#     global Status
+#     # Switch led status(on-->off; off-->on)
+#     Status = not Status
+#     # GPIO.output(LedPin, Led_status)
+#     print('SWITCH PRESSED B1TCH')
+#     while Status == False:
+#         GPIO.output(LedPin, GPIO.LOW)
+#         time.sleep(0.5)
+#         GPIO.output(LedPin, GPIO.HIGH)
+#         time.sleep(0.5)
+#         print(Status)
 
 
-def swsw(ev=None):
-    Status = not Status
-    GPIO.output(LedPin, GPIO.HIGH)
+# def swsw(ev=None):
+#     Status = not Status
+#     GPIO.output(LedPin, GPIO.HIGH)
 
 
 # Define a main function for main process
