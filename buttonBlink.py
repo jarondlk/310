@@ -48,6 +48,7 @@ def setup():
     # Set up a falling detect on BtnPin,
     # and callback function to swLed
     GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=swLed)
+    GPIO.add_event_detect(BtnPin, GPIO.RISING, callback=destroy)
 
 # Define a callback function for button callback
 
@@ -73,11 +74,8 @@ def main():
     # Print messages
     print_message()
     while True:
-        if Status == False:
-            # Don't do anything.
-            time.sleep(1)
-        elif Status == True:
-            GPIO.output(LedPin, GPIO.HIGH)
+        # Don't do anything.
+        time.sleep(1)
 
 
 # Define a destroy function for clean up everything after
