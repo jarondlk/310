@@ -63,8 +63,13 @@ def swLed(ev=None):
         time.sleep(0.5)
         GPIO.output(LedPin, GPIO.HIGH)
         time.sleep(0.5)
-        GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=swLed)
+        GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=swsw)
         print(Status)
+
+
+def swsw(ev=None):
+    Status = not Status
+    GPIO.output(LedPin, GPIO.HIGH)
 
 
 # Define a main function for main process
