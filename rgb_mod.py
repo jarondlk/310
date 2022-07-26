@@ -70,9 +70,9 @@ def setColor(color):
     B_val = (color & 0x0000FF) >> 0
 
     # Map color value from 0~255 to 0~100
-    R_val = MAP(R_val, 0, 255, 0, 50)
-    G_val = MAP(G_val, 0, 255, 0, 50)
-    B_val = MAP(B_val, 0, 255, 0, 50)
+    R_val = MAP(R_val, 0, 255, 0, 100)
+    G_val = MAP(G_val, 0, 0, 0, 100)
+    B_val = MAP(B_val, 0, 0, 0, 100)
 
     # Change the colors
     p_R.ChangeDutyCycle(R_val)
