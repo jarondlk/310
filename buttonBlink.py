@@ -57,13 +57,12 @@ def swLed(ev=None):
     # Switch led status(on-->off; off-->on)
     Status = not Status
     # GPIO.output(LedPin, Led_status)
-
+    print('SWITCH PRESSED B1TCH')
     while Status == False:
         GPIO.output(LedPin, GPIO.LOW)
         time.sleep(0.5)
         GPIO.output(LedPin, GPIO.HIGH)
         time.sleep(0.5)
-        GPIO.add_event_detect(BtnPin, GPIO.FALLING, callback=swsw)
         print(Status)
 
 
