@@ -73,10 +73,10 @@ def main():
     # Print messages
     print_message()
     while True:
-        if Status == True:
+        if Status == False:
             # Don't do anything.
             time.sleep(1)
-        elif Status == False:
+        elif Status == True:
             GPIO.output(LedPin, GPIO.HIGH)
 
 
