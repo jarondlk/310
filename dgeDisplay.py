@@ -248,7 +248,7 @@ def main():
     lcd = LCD()
     # MAX 16 CHARACTERS
     line0 = "Digital Engineer"
-    line1 = "------DGE------"
+    line1 = "******DGE******"
 
     lcd.clear()
     lcd.message("Welcome to --->\n  DGE LABORATORY")
