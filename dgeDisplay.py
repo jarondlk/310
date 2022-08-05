@@ -246,8 +246,9 @@ def main():
     global lcd
     print_msg()
     lcd = LCD()
-    line0 = "Digital Engineering"
-    line1 = "----DGE----"
+    # MAX 16 CHARACTERS
+    line0 = "Digital Engineer"
+    line1 = "------DGE------"
 
     lcd.clear()
     lcd.message("Welcome to --->\n  DGE LABORATORY")
